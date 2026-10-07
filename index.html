@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="David Boluwatife — Virtual Assistant helping businesses, creators and professionals save time and get more done remotely.">
+  <title>David Boluwatife | Virtual Assistant</title>
+  <style>
+    :root{
+      --bg:#070b12; --card:#0d1420; --card2:#111b2a; --text:#f5f7fb;
+      --muted:#aab5c5; --blue:#1683ff; --blue2:#55adff; --line:#1d2b3e;
+      --max:1120px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(92%,var(--max));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,11,18,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.08em}.brand span{color:var(--blue2)}
+    .navlinks{display:flex;gap:25px;font-size:.94rem;color:var(--muted)}
+    .navlinks a:hover{color:white}
+    .menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
+    .hero{padding:90px 0 75px;position:relative;overflow:hidden}
+    .glow{position:absolute;width:430px;height:430px;border-radius:50%;background:rgba(22,131,255,.12);filter:blur(70px);right:-160px;top:40px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+    .eyebrow{color:var(--blue2);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+    h1{font-size:clamp(2.7rem,6vw,5.2rem);line-height:.98;margin:15px 0 24px;letter-spacing:-.045em}
+    h1 span{color:var(--blue2)}
+    .hero p{font-size:1.1rem;color:var(--muted);max-width:650px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{padding:13px 20px;border-radius:10px;border:1px solid var(--line);font-weight:700}
+    .primary{background:var(--blue);border-color:var(--blue)}
+    .secondary:hover{border-color:var(--blue2)}
+    .portrait-wrap{position:relative;max-width:480px;margin:auto}
+    .portrait-wrap img{width:100%;display:block;border-radius:24px;border:1px solid var(--line);box-shadow:0 25px 70px rgba(0,0,0,.45)}
+    .badge{position:absolute;bottom:20px;left:-22px;background:rgba(13,20,32,.94);border:1px solid var(--line);padding:14px 17px;border-radius:14px}
+    .badge strong{display:block}.badge small{color:var(--muted)}
+    section{padding:80px 0}
+    .section-head{margin-bottom:35px}.section-head p{color:var(--muted);max-width:650px;margin-top:8px}
+    h2{font-size:2.25rem;letter-spacing:-.025em}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+    .card{background:linear-gradient(145deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:18px;padding:28px}
+    .card p{color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .service h3{margin:13px 0 7px}.service p{font-size:.93rem;color:var(--muted)}
+    .icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(22,131,255,.13);color:var(--blue2);font-size:1.25rem}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .work{min-height:190px}.work span{color:var(--blue2);font-size:.82rem;font-weight:700}.work h3{margin:8px 0}
+    .process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step-num{color:var(--blue2);font-size:1.8rem;font-weight:800}
+    .contact{display:grid;grid-template-columns:1fr .8fr;gap:30px}
+    .contact-list{display:grid;gap:12px;margin-top:20px}
+    .contact-item{padding:16px 18px;border:1px solid var(--line);border-radius:12px;color:var(--muted)}
+    .contact-item strong{color:white;display:block}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+    .mini{color:var(--blue2)}
+    @media(max-width:850px){
+      .navlinks{display:none}.menu{display:block}
+      .hero-grid,.about,.contact{grid-template-columns:1fr}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .work-grid,.process{grid-template-columns:1fr 1fr}
+      .portrait-wrap{max-width:520px}
+    }
+    @media(max-width:560px){
+      .hero{padding-top:55px}.services,.work-grid,.process{grid-template-columns:1fr}
+      section{padding:60px 0}.badge{left:10px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">DAVID <span>BOLUWATIFE</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#contact">Contact</a>
+      </div>
+      <button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('show')" aria-label="Menu">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="glow"></div>
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">✝ God First · Remote Support</div>
+        <h1>Reliable support for a <span>more productive you.</span></h1>
+        <p>I help businesses, creators and busy professionals save time, stay organized and get more done through dependable remote assistance.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Work With Me</a>
+          <a class="btn secondary" href="#services">Explore Services</a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <img src="assets/david-portrait.png" alt="David Boluwatife, Virtual Assistant">
+        <div class="badge"><strong>David Boluwatife</strong><small>Virtual Assistant · Nigeria | Remote</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">About Me</div><h2>Professional help. Human reliability.</h2></div>
+      <div class="about">
+        <div class="card"><p>I’m David Boluwatife, a growing Virtual Assistant focused on practical remote support. My goal is simple: take time-consuming tasks off your plate so you can focus on the work that matters most.</p></div>
+        <div class="card"><p><strong>My approach:</strong> genuine communication, organized work, attention to detail and a commitment to completing tasks properly and on time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">What I Do</div><h2>Services</h2><p>Flexible support for businesses, creators and professionals working remotely.</p></div>
+      <div class="services">
+        <div class="card service"><div class="icon">⌕</div><h3>Online Research</h3><p>Find, verify and organize useful information quickly.</p></div>
+        <div class="card service"><div class="icon">▤</div><h3>Data Entry</h3><p>Accurate, clean and organized information handling.</p></div>
+        <div class="card service"><div class="icon">↗</div><h3>Lead Generation</h3><p>Research and organize potential prospects for outreach.</p></div>
+        <div class="card service"><div class="icon">◎</div><h3>Social Media Support</h3><p>Content organization, scheduling and everyday social tasks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Portfolio</div><h2>Sample Work</h2><p>Examples of the kind of work I can deliver for clients.</p></div>
+      <div class="work-grid">
+        <div class="card work"><span>01 · RESEARCH</span><h3>Business Research Sheet</h3><p>Structured company research with names, websites, social profiles and contact information.</p></div>
+        <div class="card work"><span>02 · DATA</span><h3>Data Organization</h3><p>Cleaned and organized information into an easy-to-use spreadsheet.</p></div>
+        <div class="card work"><span>03 · SOCIAL</span><h3>Content Calendar</h3><p>A practical weekly plan for organizing social-media content and publishing tasks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">How It Works</div><h2>Simple process.</h2></div>
+      <div class="process">
+        <div class="card"><div class="step-num">01</div><h3>Tell me the task</h3><p>Share what you need done, your deadline and any important instructions.</p></div>
+        <div class="card"><div class="step-num">02</div><h3>I get to work</h3><p>I organize the task, research where needed and keep the work moving.</p></div>
+        <div class="card"><div class="step-num">03</div><h3>You receive the result</h3><p>You get clear, organized work ready for you to use.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact">
+      <div>
+        <div class="eyebrow">Let's Work Together</div>
+        <h2>Need an extra pair of hands?</h2>
+        <p style="color:var(--muted);margin-top:12px">I’m open to remote opportunities and small projects where reliable support can make a difference.</p>
+      </div>
+      <div class="card">
+        <h3>Contact David</h3>
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:davidboluwatife.va@gmail.com"><strong>Email</strong>davidboluwatife.va@gmail.com</a>
+          <a class="contact-item" href="https://x.com/" target="_blank"><strong>X / Twitter</strong>@DavidBoluVA</a>
+          <div class="contact-item"><strong>Availability</strong>Nigeria 🇳🇬 · Remote</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 David Boluwatife · Virtual Assistant · <span class="mini">God First.</span></div>
+</footer>
+</body>
+</html>
